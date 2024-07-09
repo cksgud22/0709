@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function(){
+            var n = 0;
+            setInterval(function(){
+                if(n == 3){
+                    n=0;
+                }else{
+                    n++;
+                }
+                pos = n * (-980) +"px";
+                $(".move").animate({left : pos},500)
+            },2000)
+        }) /* js_end */
+    </script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        li,
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .view {
+            width: 980px;
+            height: 379px;
+            margin: 100px auto;
+            /* background-color: yellow; */
+            position: relative;
+            overflow: hidden;
+            border: 5px solid red;
+        }
+
+        .move {
+            width: calc(980px * 4);
+            position: absolute;
+        }
+
+        .move li {
+            width: 980px;
+            height: 379px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>left slide moveing</h1>
+    <div class="view">
+        <ul class="move">
+            <li><a href="#"><img src="img/KIA01.JPG" alt="kia1"></a></li>
+            <li><a href="#"><img src="img/KIA02.JPG" alt="kia2"></a></li>
+            <li><a href="#"><img src="img/KIA03.JPG" alt="kia3"></a></li>
+            <li><a href="#"><img src="img/KIA04.JPG" alt="kia4"></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

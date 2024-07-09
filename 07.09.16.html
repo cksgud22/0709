@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul,
+        li,
+        ol {
+            list-style: none;
+        }
+
+        /* pc */
+        .wrap {}
+
+        .list {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .list li {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+
+        .list li img {
+            width: 100%;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .list{width: 85%;}
+            .list li{width: 48%;}
+        }
+        
+        /* 768px */
+
+        @media screen and (max-width: 480px) {
+            
+            .list li{width: 100%;}
+        }
+
+        /* 480px */
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul class="list">
+            <li><a href="#"><img src="img/animal01.png" alt="01"></a></li>
+            <li class="mar"><a href="#"><img src="img/animal02.png" alt="01"></a></li>
+            <li><a href="#"><img src="img/animal03.png" alt="01"></a></li>
+            <li><a href="#"><img src="img/animal04.png" alt="01"></a></li>
+            <li class="mar"><a href="#"><img src="img/animal05.png" alt="01"></a></li>
+            <li><a href="#"><img src="img/animal06.png" alt="01"></a></li>
+            <li><a href="#"><img src="img/animal07.png" alt="01"></a></li>
+            <li class="mar"><a href="#"><img src="img/animal08.png" alt="01"></a></li>
+            <li><a href="#"><img src="img/animal09.png" alt="01"></a></li>
+        </ul>
+    </div> <!-- wrap -->
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function(){
+            $(".close").click(function(){
+                $(".pop , .modal_pop").hide();
+            })
+            $(".pop_click").click(function(){
+                $(".pop, .modal_pop").show();
+            })
+        })
+    </script> <!-- js_end -->
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul,li, ol {list-style: none;}
+        html, body{width: 100%; height: 100%;}
+
+        .wrap {
+            background-color: rgb(27, 194, 194);
+            height: 700px;
+            width: 100%;
+        }
+
+        .pop {
+            width: 500px;
+            height: 300px;
+            background-color: antiquewhite;
+            border: 10px solid red;
+            padding: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            display: none;
+        }
+        .modal_pop{
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.5 );
+            display: none;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <a href="#" class="pop_click">팝업연습</a>
+    </div>
+
+    <div class="modal_pop">
+
+    </div> <!-- modal_pop -->
+
+    <div class="pop">
+        <h3>title</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quas tenetur ratione eius voluptas, ex
+            voluptatem at deleniti. Necessitatibus autem minima porro temporibus iusto deserunt magnam nihil eius sequi
+            sunt.
+        </p>
+        <button class="close">닫기 X</button>
+    </div>
+</body>
+
+</html>
